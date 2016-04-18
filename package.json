@@ -1,0 +1,29 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "start": "node server.js",
+    "test": "karma start"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^1.2.0",
+    "koa-request": "^1.0.0",
+    "koa-route": "^2.4.2",
+    "koa-static": "^2.0.0"
+  },
+  "devDependencies": {
+    "angular": "^1.5.3",
+    "angular-mocks": "^1.5.3",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-fixture": "^0.2.6",
+    "karma-jasmine": "^0.3.8",
+    "karma-json-fixtures-preprocessor": "0.0.6",
+    "karma-typescript-preprocessor": "^0.1.2",
+    "systemjs": "^0.19.26"
+  }
+}

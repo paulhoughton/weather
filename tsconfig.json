@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es5",
+        "noImplicitAny": true,
+        "sourceMap": false,
+        "out": "bundle.js"
+    },
+    "exclude": [
+        "node_modules",
+        "tests",
+        "typings/main",
+        "typings/main.d.ts"
+    ]
+}
