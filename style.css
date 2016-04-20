@@ -1,0 +1,16 @@
+body {
+  padding-top: 5rem;
+  font-size: 2rem;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+@media (max-width: 576px) {
+  body {
+      font-size: 1.4rem;
+  }
+}
+
+.overnight {
+  background-color: #eee;
+}
