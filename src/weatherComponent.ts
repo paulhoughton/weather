@@ -9,7 +9,7 @@ export default {
     const daySecs = 60 * 60 * 24;
     this.overnight = (time: number) => (time > this.current.sunrise && time > this.current.sunset && time < this.current.sunrise + daySecs) || time < this.current.sunrise;
     this.$onChanges = (changes: any) => {
-      if (changes.location) {
+      if (changes.location && changes.location.currentValue) {
         this.current = [];
         locationService.getLatLon(changes.location.currentValue).then(loc => {
           let { lat, lng } = loc[0].geometry.location;
