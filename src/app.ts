@@ -37,8 +37,4 @@ angular.module("weather.app", ['ui.router'])
     $stateProvider.state(weekState);
     $stateProvider.state(dayState);
     $urlRouterProvider.otherwise('/day/London');
-
-  }])
-  .config(['$compileProvider', function ($compileProvider) {
-  $compileProvider.debugInfoEnabled(false);
-}]);;
+  }]);
