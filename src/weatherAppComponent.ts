@@ -4,9 +4,9 @@ export default {
   bindings:{
     location:"<"
   },
-  controller: function($state) {
+  controller: ['$state', function($state) {
     this.newLocation = () => $state.go(".", { location : this.location })
-  },
+  }],
   template: `
     <form ng-submit="$ctrl.newLocation()">
       <input type="text" ng-model="$ctrl.location" placeholder="Enter a location" required autofocus/>

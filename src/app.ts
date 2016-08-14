@@ -12,7 +12,7 @@ angular.module("weather.app", ['ui.router'])
   .component("weather", WeatherComponent)
   .component("weatherWeek", WeatherWeekComponent)
   .component("search", WeatherAppComponent)
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
 
     const weekState = {
       name: 'week',
@@ -21,7 +21,7 @@ angular.module("weather.app", ['ui.router'])
         header: 'search',
         main: 'weatherWeek'
       },
-      resolve: { location: ($transition$) => $transition$.params().location }
+      resolve: { location: ['$transition$', $transition$ => $transition$.params().location ] }
     }
 
     const dayState = {
@@ -31,11 +31,14 @@ angular.module("weather.app", ['ui.router'])
         header: 'search',
         main: 'weather'
       },
-      resolve: { location: ($transition$) => $transition$.params().location }
+      resolve: { location: ['$transition$', $transition$ => $transition$.params().location ] }
     }
 
     $stateProvider.state(weekState);
     $stateProvider.state(dayState);
     $urlRouterProvider.otherwise('/day/London');
 
-  });
+  }])
+  .config(['$compileProvider', function ($compileProvider) {
+  $compileProvider.debugInfoEnabled(false);
+}]);;
