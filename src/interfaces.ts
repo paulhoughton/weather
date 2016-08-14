@@ -3,7 +3,7 @@ interface GoogleGeocodeGeometry {
   formatted_address: string;
 }
 
-interface ForecastIO {
+interface ForecastIODay {
   offset: number;
   sunrise: number;
   sunset: number;
@@ -23,5 +23,37 @@ interface ForecastIO {
     cloudCover: number;
     pressure: number;
     ozone: number;
+  }>;
+}
+
+interface ForecastIOWeek {
+  [index: number]: Array<{
+    time:number;
+    summary:string;
+    icon:string;
+    sunriseTime:number;
+    sunsetTime:number;
+    moonPhase:number;
+    precipIntensity:number;
+    precipIntensityMax:number;
+    precipIntensityMaxTime:number;
+    precipProbability:number;
+    precipType:string;
+    temperatureMin:number;
+    temperatureMinTime:number;
+    temperatureMax:number;
+    temperatureMaxTime:number;
+    apparentTemperatureMin:number;
+    apparentTemperatureMinTime:number;
+    apparentTemperatureMax:number;
+    apparentTemperatureMaxTime:number;
+    dewPoint:number;
+    humidity:number;
+    windSpeed:number;
+    windBearing:number;
+    visibility:number;
+    cloudCover:number;
+    pressure:number;
+    ozone:number;
   }>;
 }

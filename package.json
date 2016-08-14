@@ -15,15 +15,22 @@
     "koa-static": "^2.0.0"
   },
   "devDependencies": {
-    "angular": "^1.5.3",
-    "angular-mocks": "^1.5.3",
+    "@types/angular": "^1.5.10",
+    "@types/es6-shim": "0.0.29",
+    "@types/jasmine": "^2.2.31",
+    "@types/jquery": "^1.10.29",
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "angular-ui-router": "^1.0.0-beta.1",
     "jasmine-core": "^2.4.1",
-    "karma": "^0.13.22",
-    "karma-chrome-launcher": "^0.2.3",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^1.0.1",
     "karma-fixture": "^0.2.6",
-    "karma-jasmine": "^0.3.8",
+    "karma-jasmine": "^1.0.2",
     "karma-json-fixtures-preprocessor": "0.0.6",
-    "karma-typescript-preprocessor": "^0.1.2",
-    "systemjs": "^0.19.26"
+    "karma-typescript-preprocessor": "^0.2.1",
+    "koa": "^1.2.1",
+    "systemjs": "^0.19.36",
+    "typescript": "^2.1.0-dev.20160814"
   }
 }
