@@ -1,15 +1,15 @@
 {
     "compilerOptions": {
+        "moduleResolution": "node",
         "module": "system",
         "target": "es5",
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "sourceMap": false,
-        "out": "bundle.js"
+        "out": "bundle.js",
+        "strictNullChecks":true
     },
     "exclude": [
         "node_modules",
-        "tests",
-        "typings/main",
-        "typings/main.d.ts"
+        "tests"
     ]
 }
