@@ -1,10 +1,10 @@
-import * as angular from 'angular';
+import {StateService} from "angular-ui-router";
 
 export default {
   bindings:{
     location:"<"
   },
-  controller: ['$state', function($state) {
+  controller: ['$state', function($state:StateService) {
     this.newLocation = () => $state.go(".", { location : this.location })
   }],
   template: `
