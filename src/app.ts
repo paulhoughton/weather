@@ -16,6 +16,9 @@ angular.module("weather.app", ["ui.router"])
   .component("search", WeatherAppComponent)
   .config(["$stateProvider", "$urlRouterProvider", function ($stateProvider:StateProvider, $urlRouterProvider:UrlRouterProvider) {
 
+    const param = (paramId) => 
+        ['$transition$', (transition:Transition) => transition.params()[paramId]
+    
     const weekState = {
       name: 'week',
       url: '/week/{location}',
@@ -23,7 +26,7 @@ angular.module("weather.app", ["ui.router"])
         header: 'search',
         main: 'weatherWeek'
       },
-      resolve: { location: ['$transition$',(transition:Transition) => transition.params()["location"] ]}
+      resolve: { location: param("location") }
     }
 
     const dayState = {
@@ -33,7 +36,7 @@ angular.module("weather.app", ["ui.router"])
         header: 'search',
         main: 'weather'
       },
-      resolve: { location: ['$transition$',(transition:Transition) => transition.params()["location"] ]}
+      resolve: { location: param("location") ]}
     }
 
     $stateProvider.state("week", weekState);
