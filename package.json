@@ -9,28 +9,27 @@
   },
   "license": "MIT",
   "dependencies": {
-    "koa": "^1.2.0",
+    "koa": "^1.2.2",
     "koa-request": "^1.0.0",
     "koa-route": "^2.4.2",
     "koa-static": "^2.0.0"
   },
   "devDependencies": {
-    "@types/angular": "^1.5.10",
-    "@types/es6-shim": "0.0.29",
-    "@types/jasmine": "^2.2.31",
-    "@types/jquery": "^1.10.29",
+    "@types/angular": "^1.5.13",
+    "@types/es6-shim": "0.0.31",
+    "@types/jasmine": "^2.2.33",
+    "@types/jquery": "^1.10.31",
     "angular": "^1.5.8",
     "angular-mocks": "^1.5.8",
     "angular-ui-router": "^1.0.0-beta.1",
-    "jasmine-core": "^2.4.1",
+    "jasmine-core": "^2.5.0",
     "karma": "^1.2.0",
-    "karma-chrome-launcher": "^1.0.1",
+    "karma-chrome-launcher": "^2.0.0",
     "karma-fixture": "^0.2.6",
     "karma-jasmine": "^1.0.2",
     "karma-json-fixtures-preprocessor": "0.0.6",
     "karma-typescript-preprocessor": "^0.2.1",
-    "koa": "^1.2.1",
-    "systemjs": "^0.19.36",
-    "typescript": "^2.1.0-dev.20160814"
+    "systemjs": "^0.19.37",
+    "typescript": "^2.0.2"
   }
 }
