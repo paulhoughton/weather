@@ -1,14 +1,21 @@
-import {StateService} from "angular-ui-router";
+import { StateService } from "angular-ui-router";
+
 
 export default {
-  bindings:{
-    location:"<"
+  bindings: {
+    location: "<"
   },
-  controller: ['$state', function($state:StateService) {
-    this.newLocation = () => $state.go(".", { location : this.location })
-  }],
+  controller: class {
+    location: string;
+    static $inject = ["$state"];
+    constructor(private $state: StateService) { };
+
+    goToLocation() {
+      this.$state.go(".", { location: this.location })
+    }
+  },
   template: `
-    <form ng-submit="$ctrl.newLocation()">
+    <form ng-submit="$ctrl.goToLocation()">
       <input type="text" ng-model="$ctrl.location" placeholder="Enter a location" required autofocus/>
       <input type="submit" class="btn btn-primary" value="Go!"></input>
     </form>
