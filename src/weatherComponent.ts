@@ -15,11 +15,11 @@ class controller {
     if (!changes.location || !changes.location.currentValue) return false;
 
     this.current = undefined;
-    this.locationService.getLatLon(changes.location.currentValue).then(loc => {
-      let { lat, lng } = loc[0].geometry.location;
-      this.place = loc[0].formatted_address;
-      this.weatherService.getWeather(lat, lng).then(response => {
-        this.current = response.data;
+    this.locationService.getLatLon(changes.location.currentValue).then(([ loc ]) => {
+      const { lat, lng } = loc.geometry.location;
+      this.place = loc.formatted_address;
+      this.weatherService.getWeather(lat, lng).then(({ data }) => {
+        this.current = data;
         this.timezoneOffset = (this.current.offset > 0 ? "+" : "") + this.current.offset;
       });
     });
