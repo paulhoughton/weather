@@ -6,7 +6,8 @@
         "noImplicitAny": false,
         "sourceMap": false,
         "out": "bundle.js",
-        "strictNullChecks":true
+        "strictNullChecks":true,
+        "lib": ["es2015", "dom"]
     },
     "exclude": [
         "node_modules",
